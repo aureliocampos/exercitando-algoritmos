@@ -1,10 +1,3 @@
-// Criar uma janela de introdução para o programa
-// Solitar que o usuário escolha o algoritmo que ele deseja executar
-// Executar o algoritmo que o usuário escolheu para a sua interação
-// Solicitar se o usuário deseja executar outro algoritmo ou não
-// Se sim executar o próximo
-// Se não fecha o programa
-
 #include <iostream>
 #include <string.h>
 #include <locale>
@@ -19,6 +12,9 @@ void alg2HelloUserMessage();
 void alg3GetMessageWithSalary();
 void alg4Sum();
 int sum(int number1, int number2);
+void alg5HandleWithAverage();
+double handleWithAverage(double note1, double note2);
+void alg6ReturnPredecessorAndSuccessor();
 
 int main() {
 
@@ -52,6 +48,12 @@ void handlesExecutionAlgorithms() {
             break;
         case 4:
             alg4Sum();
+            break;
+        case 5:
+            alg5HandleWithAverage();
+            break;
+        case 6:
+            alg6ReturnPredecessorAndSuccessor();
             break;
         default:
             break;
@@ -128,6 +130,7 @@ void alg3GetMessageWithSalary() {
 }
 
 /*
+   Descrição do exercício:
     4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
     entre eles.
     Ex:
@@ -135,9 +138,6 @@ void alg3GetMessageWithSalary() {
     Digite outro valor: 5
     A soma entre 8 e 5 é igual a 13.
 */
-int sum(int number1, int number2) {
-    return number1 + number2;
-}
 void alg4Sum() {
     int num1, num2;
 
@@ -150,4 +150,64 @@ void alg4Sum() {
     cin >> num2;
 
     cout << "\nA soma entre " << num1 << " e " << num2 << " é igual a " << sum(num1, num2) << ".\n\n";
+
+    requestNewRunAlgorithm();
+}
+int sum(int number1, int number2) {
+    return number1 + number2;
+}
+
+/*
+  Descrição do exercício:
+    5) Faça um programa que leia as duas notas de um aluno em uma matéria e mostre
+    na tela a sua média na disciplina.
+    Ex:
+    Nota 1: 4.5
+    Nota 2: 8.5
+    A média entre 4.5 e 8.5 é igual a 6.5
+*/
+void alg5HandleWithAverage() {
+    double note1, note2;
+
+    cout << "Descubra sua média na disciplina\n";
+
+    cout << "Nota 1: ";
+    cin >> note1;
+
+    cout << "\n";
+
+    cout << "Nota 2: ";
+    cin >> note2;
+
+    cout << "\nA média entre " << note1 << " e " << note2 << " é igual a " << handleWithAverage(note1, note2) << "\n\n";
+
+    requestNewRunAlgorithm();
+}
+double handleWithAverage(double note1, double note2) {
+    return (note1 + note2) / 2;
+}
+
+/*
+  Descrição do exercício:
+    6) Faça um programa que leia um número inteiro e mostre o seu antecessor e seu
+    sucessor.
+    Ex:
+    Digite um número: 9
+    O antecessor de 9 é 8
+    O sucessor de 9 é 10
+*/
+void alg6ReturnPredecessorAndSuccessor() {
+    int number, predecessor, successor;
+
+    cout << "Digite um número: ";
+    cin >> number;
+
+    predecessor = number - 1;
+    successor = number + 1;
+
+    cout << "O antecessor de " << number << " é " << predecessor;
+    cout << "\n";
+    cout << "O sucessor de " << number << " é " << successor;
+
+    requestNewRunAlgorithm();
 }
