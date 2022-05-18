@@ -1,2 +1,7 @@
 ﻿  main.cpp
+C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\Algoritmos\main.cpp(263,20): warning C4101: 'Centimeter': variável local não referenciada
+C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\Algoritmos\main.cpp(263,9): warning C4101: 'decimeter': variável local não referenciada
+C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\Algoritmos\main.cpp(262,33): warning C4101: 'hectometer': variável local não referenciada
+C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\Algoritmos\main.cpp(262,45): warning C4101: 'decameter': variável local não referenciada
+C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\Algoritmos\main.cpp(263,32): warning C4101: 'MilÃ­metro': variável local não referenciada
   Algoritmos.vcxproj -> C:\Users\home\Desktop\FACULDADE\exercitando-algoritmos\C++\x64\Debug\Algoritmos.exe
