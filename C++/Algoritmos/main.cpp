@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string.h>
 #include <locale>
+#include <iomanip>
 
 using namespace std;
 
@@ -16,6 +17,8 @@ int requestNewRunAlgorithm();
 void alg1HelloWorld();
 void alg2HelloUserMessage();
 void alg3GetMessageWithSalary();
+void alg4Sum();
+int sum(int number1, int number2);
 
 int main() {
 
@@ -46,6 +49,9 @@ void handlesExecutionAlgorithms() {
             break;
         case 3: 
             alg3GetMessageWithSalary();
+            break;
+        case 4:
+            alg4Sum();
             break;
         default:
             break;
@@ -113,10 +119,35 @@ void alg3GetMessageWithSalary() {
     cout << "Digite o nome do Colaborador(a): ";
     cin >> collaborator;
 
-    cout << "Digite o valor do salário: ";
+    cout << "Digite o valor do salário: " << fixed << setprecision(2);
     cin >> salary;
 
     cout << "\nO funcionário " << collaborator << " tem um salário de R$" << salary << " em Junho.";
 
     requestNewRunAlgorithm();
+}
+
+/*
+    4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
+    entre eles.
+    Ex:
+    Digite um valor: 8
+    Digite outro valor: 5
+    A soma entre 8 e 5 é igual a 13.
+*/
+int sum(int number1, int number2) {
+    return number1 + number2;
+}
+void alg4Sum() {
+    int num1, num2;
+
+    cout << "Retorna a soma de dois números inteiros\n";
+
+    cout << "\nDigite o primeiro número: ";
+    cin >> num1;
+
+    cout << "\nDigite o segundo número: ";
+    cin >> num2;
+
+    cout << "\nA soma entre " << num1 << " e " << num2 << " é igual a " << sum(num1, num2) << ".\n\n";
 }
