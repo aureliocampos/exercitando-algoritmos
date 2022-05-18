@@ -6,8 +6,8 @@
 // Se não fecha o programa
 
 #include <iostream>
-#include <locale>
 #include <string.h>
+#include <locale>
 
 using namespace std;
 
@@ -18,7 +18,8 @@ void alg2HelloUserMessage();
 void alg3GetMessageWithSalary();
 
 int main() {
-    setlocale(LC_ALL, "");
+
+    setlocale(LC_ALL, "pt_BR.UTF-8");
 
     cout << "\n" << "======  Exercícios de Algoritmos  ======";
     cout << "\n" << "======  Prof. Gustavo Guanabara  ======" << "\n";
@@ -42,15 +43,17 @@ void handlesExecutionAlgorithms() {
             break;
         case 2:
             alg2HelloUserMessage();
+            break;
         case 3: 
             alg3GetMessageWithSalary();
+            break;
         default:
             break;
     }
 }
 
 int requestNewRunAlgorithm() {
-    char answer = 'N';
+    char answer;
     cout << "\n\n=========================================";
     cout << "\n Deseja Executar um novo algoritmo?[S/N]\n";
     cout << "=========================================\n";
@@ -105,14 +108,15 @@ void alg2HelloUserMessage() {
 */
 void alg3GetMessageWithSalary() {
     string collaborator;
-    double salary = 4800.13;
+    double salary = 0;
     
     cout << "Digite o nome do Colaborador(a): ";
     cin >> collaborator;
 
-    cout << "Obs: Digite os centavos com ' . '(ponto) ao invés de ' , '(vírgula)\n";
     cout << "Digite o valor do salário: ";
     cin >> salary;
 
-    cout << "O funcionário " << collaborator << " tem um salário de R$" << salary << " em Junho.";
+    cout << "\nO funcionário " << collaborator << " tem um salário de R$" << salary << " em Junho.";
+
+    requestNewRunAlgorithm();
 }
